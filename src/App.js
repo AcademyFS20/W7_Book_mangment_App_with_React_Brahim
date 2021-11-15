@@ -1,19 +1,22 @@
 import React from "react";
 import "./index.css";
-import Books from "./Containers/Books";
+import Books from "./containers/Books";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import styled from "styled-components";
-import CreateBookForm from "./Containers/CreateBookForm";
+import CreateBookForm from "./containers/CreateBookForm";
 
 function App() {
+
+
+
     return (
         <>
             <Wrapper>
                 <div className="page">
                     <Title />
                     <Books />
-                    <Button inclination="btn primary" text='create'/>
+                    <Button inclination="btn primary" text='create' size="lg"/>
                     <div>
                         <CreateBookForm />
                     </div>
@@ -29,7 +32,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 21px;
+    gap: 13px;
   }
 `;
 

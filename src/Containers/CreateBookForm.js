@@ -39,7 +39,7 @@ export default class CreateBookForm extends Component {
             <option value="3">Computer Science</option>
                   </Form.Select>
           </FloatingLabel>
-          <Button inclination='btn-Success' text="validate"/>
+          <Button inclination='btn-success' text="validate"/>
         </Form>
         </Wrapper>
       </div>
@@ -52,13 +52,17 @@ const Wrapper = styled.div`
 
      
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-    width:120%;
-    padding: 20px;
+    width:134%;
+    padding: 21px;
 
 :hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 }  
+
+Button{
+  margin-top:13px;
+}
       
      
 `
