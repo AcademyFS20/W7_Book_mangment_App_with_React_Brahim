@@ -12,6 +12,16 @@ import Button from "../components/Button";
 import styled from "styled-components";
 
 export default class CreateBookForm extends Component {
+
+// state = {
+
+//     bookName:"",
+//     authorName:"",
+//     numberOfPages:"",
+//     category:""
+
+// }
+
   render() {
     return (
       <div>
@@ -23,7 +33,7 @@ export default class CreateBookForm extends Component {
             <Form.Control type="text" placeholder="Enter book's name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicAuthorName">
-            <Form.Label>Authors Name</Form.Label>
+            <Form.Label>Author Name</Form.Label>
             <Form.Control type="text" placeholder="Enter author's name" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicNumberPages">
@@ -39,7 +49,8 @@ export default class CreateBookForm extends Component {
             <option value="3">Computer Science</option>
                   </Form.Select>
           </FloatingLabel>
-          <Button inclination='btn-success' text="validate"/>
+          <Button inclination='btn-success' text="validate" type="submit"/>
+
         </Form>
         </Wrapper>
       </div>
@@ -50,10 +61,9 @@ export default class CreateBookForm extends Component {
 
 const Wrapper = styled.div`
 
-     
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-    width:134%;
-    padding: 21px;
+width:612px;
+box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+padding: 21px;
 
 :hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -63,6 +73,4 @@ const Wrapper = styled.div`
 Button{
   margin-top:13px;
 }
-      
-     
 `

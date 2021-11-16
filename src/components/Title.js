@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Title() {
+function Title(props) {
     return (
         <div>
-            <h1>Admin dashboard books</h1>
+            <h1>{props.titleContent}</h1>
         </div>
     )
 }

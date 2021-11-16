@@ -1,39 +1,44 @@
-import React from "react";
+import React, { Component } from 'react'
 import "./index.css";
 import Books from "./containers/Books";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import styled from "styled-components";
 import CreateBookForm from "./containers/CreateBookForm";
-
-function App() {
-
+import { ThemeProvider } from 'react-bootstrap';
 
 
-    return (
-        <>
-            <Wrapper>
-                <div className="page">
-                    <Title />
-                    <Books />
-                    <Button inclination="btn primary" text='create' size="lg"/>
-                    <div>
-                        <CreateBookForm />
+export default class App extends Component {
+
+
+  
+
+    render() {
+
+        return (
+            <>
+                <Wrapper>
+                    <div className="page">
+                            <Title titleContent="Admin dashboard Books" />
+                            <Books />
                     </div>
-                </div>
-            </Wrapper>
-        </>
-    );
+                </Wrapper>
+            </>
+        )
+    }
 }
 
+
 const Wrapper = styled.div`
-  .page {
+
+
+.page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 13px;
-  }
+    gap: 21px;
+}
+
 `;
 
-export default App;
