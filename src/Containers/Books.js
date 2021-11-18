@@ -19,8 +19,16 @@ export default class Books extends Component {
     this.setState({ toggle: !this.state.toggle });
   };
 
-  addItem = () => {
-    console.log("test");
+  addItem = (title, author, category, nbpages) => {
+    console.log(title);
+    console.log(author);
+    console.log(category);
+    console.log(nbpages);
+
+    const id = ((this.state.data.length) + 1)
+    const newTable = { id, title, author, category, nbpages }
+    this.state.data.push(newTable)
+    this.setState(this.state.data);
   };
 
   deleteItem = (id) => {
@@ -34,24 +42,17 @@ export default class Books extends Component {
     this.setState({ data: newTable });
   };
 
-  update = (id, title, author, category, pages) => {
-
-    console.log('imready to update');
-
-
+  update = (id, title, author, category, nbpages) => {
     const index = this.state.data.findIndex(item => {
-
       return item.id === id
     })
 
     const newBook = {
-      id, title, author, category, pages
+      id, title, author, category, nbpages
     }
 
     const newList = [...this.state.data];
-
     newList[index] = newBook;
-
     this.setState({ data: newList, idBook: 0 })
   }
 
@@ -83,15 +84,8 @@ export default class Books extends Component {
                         authorName={author}
                         categories={category}
                         modify={() => this.setState({ idBook: item.id })}
-
+                        delete={() => this.deleteItem(item.id)}
                       />
-                      <td>
-                        <Button
-                          inclination="btn-danger"
-                          text="delete"
-                          click={() => this.deleteItem(item.id)}
-                        />
-                      </td>
                     </tr>
                   );
                 } else {

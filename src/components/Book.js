@@ -8,8 +8,16 @@ function Book(props) {
             <td>{props.authorName}</td>
             <td>{props.categories}</td>
             <td>{props.nbPages}</td>
-            <td><Button click={props.modify} inclination="btn-warning" text="update" /></td>
-
+            <td>
+                <Button
+                    click={props.modify}
+                    inclination="btn-warning"
+                    text="update" />
+                <Button
+                    inclination="btn-danger"
+                    text="delete"
+                    click={props.delete} />
+            </td>
         </>
     )
 }
