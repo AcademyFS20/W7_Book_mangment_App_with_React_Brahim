@@ -1,4 +1,4 @@
-# W8_Book_mangment_App_with_React_Brahim
+# W7_Book_mangment_App_with_React_Brahim
 
 An app with react to manage books.
 it provides the user with a dashboared to add books, delete them and the possibility to edit them.
